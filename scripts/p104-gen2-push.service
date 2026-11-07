@@ -1,0 +1,12 @@
+[Unit]
+Description=P104-100 PCIe Gen2 push (gen2kr kretprobe at probe-return)
+# 等 nvidia 模块与设备就绪后再推
+After=multi-user.target systemd-modules-load.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/p104-gen2-push.sh
+RemainAfterExit=no
+
+[Install]
+WantedBy=multi-user.target

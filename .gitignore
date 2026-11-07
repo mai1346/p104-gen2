@@ -1,0 +1,11 @@
+# 编译产物
+*.o
+*.ko
+*.mod
+*.mod.c
+*.mod.o
+.*.cmd
+Module.symvers
+modules.order
+build/
+__pycache__/
